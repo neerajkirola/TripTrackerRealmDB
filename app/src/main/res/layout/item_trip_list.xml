@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelinestart"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="@dimen/item_start_margin" />
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textSize="@dimen/textsize_16sp"
+        app:layout_constraintStart_toEndOf="@+id/guidelinestart"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvStartDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="start time"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toEndOf="@id/guidelinestart"
+        app:layout_constraintTop_toBottomOf="@id/tvTitle"
+
+        />
+
+    <TextView
+        android:id="@+id/tvStartAddress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="from"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toEndOf="@id/guidelinestart"
+        app:layout_constraintTop_toBottomOf="@id/tvStartDate"
+
+        />
+
+    <TextView
+        android:id="@+id/tvEndDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="end time"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toEndOf="@id/guidelinestart"
+        app:layout_constraintTop_toBottomOf="@id/tvStartAddress"
+
+        />
+
+    <TextView
+        android:id="@+id/tvEndAddress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="from"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toEndOf="@id/guidelinestart"
+        app:layout_constraintTop_toBottomOf="@id/tvEndDate"
+
+        />
+
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="@color/light_blue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvEndAddress" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
